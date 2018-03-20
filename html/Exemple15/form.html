@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create User</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<!--################## Copy and paste the form from ex_14 ##################-->
+  <div>
+    <h1>Create User</h1>
+	<hr>
+	<div>
+		<form action="create_user.html" method="get" enctype="application/x-form-urlencoded">
+			<fieldset width="10">
+				<label>username : 
+				<input type="text" name="username" size="30" maxlength="12" pattern="^[a-zA-Z]+$" title="Input only letters" required></label>
+				<label>Password : 
+				<input type="password" name="password" size="30" maxlength="8" placeholder="password" pattern="^[0-9]+$" title="Input only numbers" required /></label>
+			</fieldset><br><br>
+			<fieldset>
+				<legend>User Form</legend>
+				Select your favourite superheroe:
+				<input type="radio" name="heroe" value="false"> Superman
+				<input type="radio" name="heroe" value="true" checked> Batman
+				<input type="radio" name="heroe" value="false"> Wonder Woman
+				<input type="radio" name="heroe" value="false"> Flash
+				<input type="radio" name="heroe" value="false"> Thor
+				<input type="radio" name="heroe" value="false"> Hulk
+			</fieldset><br><br>
+			 Select your favourite video game  : 
+			  <input type="checkbox" name="videogames" value="Fifa"> Fifa
+			  <input type="checkbox" name="videogames" value="NHL"> NHL
+			  <input type="checkbox" name="videogames" value="Residen Evil"> Residen Evil 
+			  <input type="checkbox" name="videogames" value="Uncharted" width="5" height="5"> Uncharted
+			  <br><br>
+			  <input type="hidden" name="userid" value="2300" >
+			  <legend for="birthday">Birthday</legend>
+			  <input type="date" name="birthday" placeholder="select your birthday"/>
+			  <legend for="email">E-mail</legend>
+			  <input type="email" name="email" placeholder="Type here your email" required />
+			  <legend for="url">URL</legend>
+			  <input type="url" name="url" placeholder="URL"/>
+
+			  <br><br>
+			  <input type="image" name="login" src="img/register_button.png" alt="Submit" width="78" height="78" >
+		</form action="https://www.google.ca/search?q=YOUR_SEARCH_VALUE" method="get" enctype="application/x-form-urlencoded">
+			<legend for="q">Search...</legend>
+			<input type="search" name="q" placeholder="Search what you want here" />	
+			<input type="image" name="login" src="img/register_button.png" alt="Submit" width="78" height="78" >
+		<form>
+		
+		</form>
+	</div>
+
+  </div>
+  
+</body>
+</html>

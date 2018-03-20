@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Created User</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div>
+    <h1>Created User</h1>
+	<hr>
+	<a href="#">Login here... </a>
+    <p>Now you can login to our site</p>
+	
+	<a href="index.html">Go to index here... </a>
+  
+  </div>
+  
+  <div>
+   <hr>
+		<form>
+			<fieldset width="10">
+				<label>name : 
+				<input type="text" name="name" placeholder="name" size="30" maxlength="12"></label>
+				
+				<select name="countries">
+					<option value="">Please select a Country</option>
+					<option value="arg">Argentina</option>
+					<option value="bra">Brasil</option>
+					<option value="chl">Chile</option>
+					<option value="can" selected="selected">Canada</option>
+				</select>
+				
+				<textarea name="about" placeholder="Please let us know about your self "></textarea>
+				
+				 <button value="create" name="create-user">+ User</button>
+				
+				<label>Password : 
+				<input type="password" name="password" size="30" maxlength="8" placeholder="password" /></label>
+			</fieldset><br><br>
+			
+			  <br><br>
+			  <input type="image" name="login" src="img/register_button.png" alt="Submit" width="78" height="78" >
+		</form>
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+		  <input type="file" name="filename" />
+		  <input type="file" name="filename" multiple="multiple" />
+		  <input type="file" name="filename" multiple />
+		</form>
+	</div>
+</body>
+</html>
