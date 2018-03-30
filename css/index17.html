@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning CSS</title>
+    
+    <style>
+      table {border-collapse: collapse; font-family: Arial, Helvetica, sans-serif; color: #685f74; }
+      thead {color: #685e5c; font-weight: bold;}
+       tbody tr {border-bottom: 1px solid #ddd; /*background-color: aquamarine;*/} 
+      th, td {padding: 20px;}
+      tbody tr td:first-child { color: #3e7589; }
+      tbody tr td:last-child { border: none;}
+      tfoot {text-align: center;}
+      a {display: inline-block;color:#aaa; margin-right: 10px; text-decoration-line: none;}
+      .active { color: white; font-weight: bold; background-color: #008cba; 
+                padding-top: 10px; padding-bottom: 10px; padding-left: 15px; padding-right: 15px; border-radius: 10px;
+       }
+       .selected { background-color: #d9edf6;  }
+       .error { background-color: #f2dedf;}
+       .owntable { border: 10px;  width: 900px; height: 500px;}
+       .header {color: #89bdd3; font-weight: bolder; font-size: 25px;}
+       tbody.body1 { text-align: right;}
+       .accept {background-color: #e3e3e3;}
+       .done {background-color: #c9c9c9; }
+       .active2 { color: white; font-weight: bold; background-color: #3147c5;
+                  padding-top: 10px; padding-bottom: 10px; padding-left: 15px; padding-right: 15px; 
+                  border-radius: 10px;
+       }
+       h1 {color: #685e5c; font-weight: bolder; padding: 20px; text-align: center; }
+    </style>
+
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+            <th>Header 5</th>
+            <th>Header 6</th>
+        </tr>
+      </thead>
+      <tbody class="body1">
+        <tr class="error">
+          <td>Content 1</td>
+          <td>Content 2</td>
+          <td>Content 3</td>
+          <td>Content 4</td>
+          <td>Content 5</td>
+          <td>Content 6</td>
+        </tr>
+        <tr>
+          <td>Content 1</td>
+          <td>Content 2</td>
+          <td>Content 3</td>
+          <td>Content 4</td>
+          <td>Content 5</td>
+          <td>Content 6</td>
+        </tr>
+        <tr class="selected">
+          <td>Content 1</td>
+          <td>Content 2</td>
+          <td>Content 3</td>
+          <td>Content 4</td>
+          <td>Content 5</td>
+          <td>Content 6</td>
+        </tr>
+        <tr>
+          <td>Content 1</td>
+          <td>Content 2</td>
+          <td>Content 3</td>
+          <td>Content 4</td>
+          <td>Content 5</td>
+          <td>Content 6</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="6">
+            <a href="#">first</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">last</a>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="owntable">
+        <h1>Hugo's Table</h1>
+        <table>
+            <thead>
+              <tr class="header">
+                  <th>Header 1</th>
+                  <th>Header 2</th>
+                  <th>Header 3</th>
+                  <th>Header 4</th>
+                  <th>Header 5</th>
+                  <th>Header 6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="accept">
+                <td>Content 1</td>
+                <td>Content 2</td>
+                <td>Content 3</td>
+                <td>Content 4</td>
+                <td>Content 5</td>
+                <td>Content 6</td>
+              </tr>
+              <tr>
+                <td>Content 1</td>
+                <td>Content 2</td>
+                <td>Content 3</td>
+                <td>Content 4</td>
+                <td>Content 5</td>
+                <td>Content 6</td>
+              </tr>
+              <tr class="done">
+                <td>Content 1</td>
+                <td>Content 2</td>
+                <td>Content 3</td>
+                <td>Content 4</td>
+                <td>Content 5</td>
+                <td>Content 6</td>
+              </tr>
+              <tr>
+                <td>Content 1</td>
+                <td>Content 2</td>
+                <td>Content 3</td>
+                <td>Content 4</td>
+                <td>Content 5</td>
+                <td>Content 6</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6">
+                  <a href="#">first</a>
+                  <a href="#">1</a>
+                  <a href="#" class="active2">2</a>
+                  <a href="#">3</a>
+                  <a href="#">last</a>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+    </div>
+  </body>
+</html>
