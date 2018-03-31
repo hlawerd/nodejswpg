@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learing CSS</title>
+  <style>
+    .container { background-color: #eee;color: white; border: 1px solid gray; }
+    div > div { position: relative; width: 200px; height: 200px; background-color: red;
+                font-size: 72px;text-align: center;line-height:  200px;
+                box-shadow: 0 2px 1px #777; text-shadow: 0 2px 1px #777;
+              }
+    div + div:hover { border-radius: 10px; background-color: #ddd;}
+    .container div:first-child {top: 0px; left: 60px;}
+    .container div:last-child { top: 0px; left: 260px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>1</div>
+    <div>2</div>
+  </div>
+</body>
+</html>
