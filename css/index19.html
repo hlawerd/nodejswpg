@@ -7,25 +7,23 @@
       form { background: #eee; padding: 10px 5px 10px 5px; /*padding top right botton left*/
              text-align: right; border-bottom: 1px solid #ddd;  
             }
-      input[type="text"] { 
+      input[type="text"],
+      input[type="password"],
+      button[type="submit"] { 
           display: inline-block; padding: 10px; border: 1px solid #ddd; border-radius: 5px;
-          margin-right: 30px;
+          margin-right: 30px; outline: none;
        }
-      input[type="password"] { 
-          display: inline-block; padding: 10px; border: 1px solid #ddd; border-radius: 5px;
-          margin-right: 30px;
-       }
-      input['submit'] { 
-          display: inline-block; padding: 10px; border: 1px solid #ddd; border-radius: 5px;
-          margin-right: 30px;
-       }
+       input:focus, button:focus { border: 1px solid #EC576B; box-shadow: 0 6px 6px -6px #777; }
+       button { background-color: #EC576B; color: white; margin-right: 0px; }
+       button:hover { background-color: rgb(240, 50, 76); color: white; cursor: pointer; }
+      
   </style>
 </head>
 <body>
   <form>
       <input type="text" name="username" placeholder="Username" >
       <input type="password" name="password" placeholder="Password" >
-      <button type='submit' >Submit</button>
+      <button type="submit" >Submit</button>
   </form>
 </body>
 </html>
