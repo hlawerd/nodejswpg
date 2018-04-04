@@ -1,4 +1,8 @@
-var firstname, lastapelido, Age, address, DateofBirth;
+var firstname;
+var lastapelido;
+var Age;
+var address;
+var DateofBirth;
 
 firstname = 'Hugo';
 lastapelido = 'Gomes de Lima';
