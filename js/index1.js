@@ -1,1 +1,1 @@
-var firstname, lastname, Age, address, DateofBirth;
+var firstname, lastname, Age, address, dateofBirth;
