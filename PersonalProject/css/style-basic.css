@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans',serif;
+  font-size: 16px;
+  color: #868e96;
+  background-color: #fff;
+}
+
+.cont-left {
+  list-style-type: none;
+  font-size: 20px;
+  margin: 0;
+  padding: .5rem;
+  background-color: #bd5d38;
+  position: fixed;
+  height: 100%;
+  width: 22%;
+  overflow: auto;
+  text-align: center;
+}
+			
+ul {				
+  /* list-style-type: none;
+  font-size: 20px; */
+  margin: 0px;
+  padding: 0px; 
+ /*  width: 22%; */
+  background-color: #bd5d38;
+  /* position: fixed; */
+  /* height: 100%; */
+  /* overflow: auto; */
+padding-top: 100px; 
+  /* text-align: center; */
+}
+
+li a {
+  display: block;
+  color: rgba(240, 229, 229, 0.664);
+  padding: 8px 16px;
+  text-decoration: none;
+  padding: .5rem 1rem;
+  background-color: transparent;
+}
+
+li a.active {
+  background-color: #bd5e3842;
+  color: #fff;
+}
+
+li a:hover:not(.active) {
+  background-color: #bd5e3842;
+  color: white;
+}
+.nav-item {
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+
+.d-large-none {display: none;}
+
+.d-large-block {display: block;}
+
+.image-fluid-circle {
+  max-width: 10rem; 
+  max-height: 10rem;
+  border: .5rem solid;
+  margin-right: auto; 
+  margin-bottom: .5rem; 
+  vertical-align: middle; 
+  color: #f8f9fa; 
+  cursor: zoom-in;
+  border-radius: 50%;
+}
+
+.cont {
+  margin-left:25%;
+  padding:1px 16px;
+  height:1000px;
+} 
+
+a {color: #bd5d38;}
+
+.section_1{
+  padding-top: 3rem;
+  padding-bottom: 3rem; /*line by get space to the next section*/
+    border-bottom: 1px solid #dee2e6;
+}
+
+.my-auto {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-bottom: 5em;
+}
+.mb-0{
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 6em;
+  line-height: 5.5rem;
+  text-transform: uppercase;
+  color: #343a40;
+}
+.span-text-primary {
+  color: #bd5d38;
+}
+.subheading{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.35rem;
+}
+.p-mb { margin-bottom: 3rem;}
+
+.tx-dec-none {text-decoration: none; }
+
+/* a {text-decoration: none;} */
+
+i.fa {
+display: inline-block;
+border-radius: 70%;
+box-shadow: 0px 0px 2px #888;
+padding: 0.5em 0.6em;
+background-color: #495057; color: white;
+vertical-align: middle;
+line-height: 1em;
+position: relative;
+font-size: 2rem;
+margin-right: .9rem;
+font-size:28px;
+}
+
+i.fa:hover {
+  background-color: #bd5d38;
+}
+
+.h-section {
+  font-size: 3.5rem;
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.flex-container {
+  display:flex; 
+  height: 100px;
+  align-items: stretch;/* background-color: DodgerBlue; */
+}
+
+
+.flex-container > div {
+  width: 400px;
+  margin: 5px;
+  text-align: center;
+  line-height: 75px;
+}
+
+.material-icons{
+  display: inline-block;
+  float: left;
+  border-color: #f47933; 
+  box-shadow: 0 2px 1px #1a1919;
+  padding: 0.2em 0.2em;
+  background-color: #fefeff;
+  color: rgb(10, 10, 10); 
+  vertical-align: middle;
+  line-height: 1em;
+  position: relative;
+  border-radius: 50%;
+  margin-right: .5rem;
+  font-size:12px;
+}
+.color-tx { color: #bd5d38;} /* color by text located on right site in the div*/
+
+.ds-flex-stch { 
+ display:flex; 
+ height: 200px; 
+ align-items: stretch; 
+}
+
+.edu-brand-left {
+  margin: 5px; 
+  text-align: left; 
+  line-height: 15px; 
+  flex-basis: 700px;
+}
+.edu-h3 {
+  font-size: 30px;  
+  margin-top: 0px; 
+  margin-bottom: -20px;
+}
+
+.edu-brand-bottom {
+  font-size: 1.35rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Saira Extra Condensed',serif;
+}
+
+.edu-brand-right {
+  width: 400px;
+  margin: 5px; 
+  text-align: right;  
+  line-height: 75px; 
+  flex-basis:250px;
+ 
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0; 
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;border-radius: 20%;
+  max-width: 300px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
