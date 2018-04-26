@@ -3,8 +3,18 @@ let message     = 'Ready Player One is a 2011 science fiction novel, and the deb
 /* let copy = message.slice(0, 314);
 let copy2 = message.slice(315,696); */
 
-console.log('message in UPPERCASE\n\n' +message.toUpperCase()+ '\n\nmessage in LOWERCASE\n\n'  +message.toLowerCase()+ '\n\n'
-+'message in UPPERCASE as selected\n\n' +message.slice(0, 315).toUpperCase()+ '\n\n'
-+'message in LOWERCASE as selected\n\n' +message.slice(315,696).toLowerCase()+ '\n\n'
-+'message in CONCATED\n\n' +message.slice(0, 315).concat(message.slice(315,696))+ '\n\n'
-+`The message has \"${message.length}\" characters long`);
+
+try {
+    console.log('message in UPPERCASE\n\n' +message.toUpperCase()+ '\n\nmessage in LOWERCASE\n\n'  +message.toLowerCase()+ '\n\n'
+                +'message in UPPERCASE as selected\n\n' +message.slice(0, 315).toUpperCase()+ '\n\n'
+                +'message in LOWERCASE as selected\n\n' +message.slice(315,696).toLowerCase()+ '\n\n'
+                +'message in CONCATED\n\n' +message.slice(0, 315).concat(message.slice(315,696))+ '\n\n'
+                +`The message has \"${message.length}\" characters long`);
+
+    
+  }
+  catch(error) {
+    console.error(error);
+    // expected output: SyntaxError: unterminated string literal
+    // Note - error messages will vary depending on browser
+  }
