@@ -1,7 +1,9 @@
 let number = 0;
 
-while (number <= 10) {
+do {
 
   console.log(number++);
   
-}
+} while (number <= 10)
+
+

@@ -1,10 +1,9 @@
 let estrela = '';
 let number = 0;
 
-while (number <= 13) {
+do {
   console.log(estrela = estrela + '*');
   number++;
-
-} 
+} while (number <= 13) 
 
 
