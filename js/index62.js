@@ -1,6 +1,7 @@
 let monthNumber   = 9 ;
 let monthName  = null;
 let monthDays = null;
+let msg = '';
 
 switch (monthNumber) {
   case 1 :
@@ -30,28 +31,34 @@ switch (monthNumber) {
   case 7:
     monthName = `July`;
     monthDays = `31 days`;
+    break;
   case 8:
     monthName = `August`;
     monthDays = `31 days`;
+    break;
   case 9:
     monthName = `September`;
     monthDays = `30 days`;
+    break;
   case 10:
     monthName = `October`;
     monthDays = `31 days`;
+    break;
   case 11:
     monthName = `November`;
     monthDays = `30 days`;
+    break;
   case 12:
     monthName = `December`;
     monthDays = `31 days`;
+    break;
   default:
-    if (monthName === null && monthDays === null){
-        console.log('Error: Please input a number bettwen 1 and 12');
-    } else { 
-        console.log(`\"${monthName}\" is the selected month and has \"${monthDays}\"`);
-    }
-     
+    msg = 'Error: Please input a number bettwen 1 and 12';
 }
 
+if (monthName !== null && monthDays !== null){
+  msg = `\"${monthName}\" is the selected month and has \"${monthDays}\"`;
+} 
 
+
+console.log(msg);
