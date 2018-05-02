@@ -1,9 +1,5 @@
-let number = 0;
-
-do {
- 
-  console.log(number+=2);
+for (let number = 0; number <= 100; number += 2) {
+  let msg = number;
+  console.log(msg);
   
-} while (number <= 100)
-
-
+} 

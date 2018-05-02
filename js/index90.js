@@ -1,12 +1,14 @@
-let X = 1;
+
 let msg = ''; 
 let Soma = 0;
 
-do {
+for (let X = 1; X <= 1000; X++ ) {
   if (X % 2 === 1 ){
     msg = `Impar`; 
-    Soma = (Soma+X);
+    Soma = (Soma+X); 
     console.log(`when number is  ${X}`, `Result will be ${msg}`, `and sum ${Soma}`);
   }
   X++;
-} while (X <= 1000)
+
+
+} 

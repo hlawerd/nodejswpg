@@ -1,8 +1,8 @@
-let number = 100;
 
 
-do {
 
-  console.log(number--);
+for (let number = 100; number >= 0 ; number--) {
+  let msg = number;
+  console.log(msg);
 
-} while (number >= 0)
+}

@@ -3,9 +3,9 @@ let N  = 80,
     F1 = -1, 
     F2 = 1;
 
-while (F <= N){
+do {
     F  = (F1 + F2);
     F1 = F2;
     F2 = F;
     console.log(F);
-}
+} while (F <= N)

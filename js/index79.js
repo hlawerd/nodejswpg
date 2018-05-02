@@ -1,10 +1,10 @@
 let number = 0;
 let result = 0;
 
-while (number <= 100) {
+do {
   console.log(`when number is  ${number}`, `Result will be ${result}`);
   result +=number;
   number++; 
-}
+} while (number <= 100)
 
 
