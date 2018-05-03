@@ -9,6 +9,4 @@ for (let X = 1; X <= 1000; X++ ) {
     console.log(`when number is  ${X}`, `Result will be ${msg}`, `and sum ${Soma}`);
   }
   X++;
-
-
 } 
