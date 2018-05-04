@@ -1,7 +1,8 @@
 let estrela = '';
-let number = 0;
 
-do {
+
+for (let number = 0; number <= 13; number++) {
   console.log(estrela = estrela + '*');
-  number++;
-} while (number <= 13) 
+  
+}
+
