@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        
+        let username = window.prompt(`Insert you Username here:`);
+        let password = window.prompt(`Insert your Password here:`);
+
+        
+        let msg1 = setTimeout(function(){
+            window.alert(`Welcome ${username.toUpperCase()}`);
+        }, 1000);
+
+
+        let msg3  = setTimeout(function(){
+            if (window.confirm(`Do you still want to be logged?`)){
+                alert(`${username.toUpperCase()} your session has been restored `);
+                } else {
+                alert(`${username.toUpperCase()} your session has expaired`);
+                }
+        }, 10000 );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
