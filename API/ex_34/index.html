@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function() {
+
+            const firstButton = document.querySelector('button');//.addEventListener('click', greeting); => I don't know why it does not work
+            const secondButton= document.getElementById('secondButton');
+            
+             // ############# request function #############
+            function greeting(){
+                console.log('we\'re using as firstButton event listener');
+            }
+            function removeHandler() {
+                firstButton.removeEventListener('click', greeting);
+            }
+            // ############# BUtton action #############
+            firstButton.addEventListener('click',greeting);
+            secondButton.addEventListener('click', removeHandler) 
+        }        
+    </script>
+
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+  </body>
+</html>

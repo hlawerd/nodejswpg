@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+  </head>
+  <script>
+      window.onload = function(){
+
+        let Selection = window.prompt('Type what numbers do you want ?');
+        const body   = document.querySelector('body');
+        body.innerHTML = '<ul></ul>'; // created the <ul> element and inserted into the body
+        
+        const ul = document.querySelector('ul');
+        const children = ul.children;
+
+       // const olChildElement = children[1];
+
+
+        body.innerHTML = '<ol></ol>'; // created the <ol> element and inserted into the body
+        console.log(body);
+        let olElement = document.querySelectorAll('ol');
+        if (Selection%2===0) {
+            for (let index = 0; index <= Selection; index++){ let olChildElement = children[index]; console.log(olChildElement)}
+            let h1 = document.querySelector('h1');
+          //  h1.style.color      =   'red';
+
+            console.log(h1.innerHTML=`<ol>number the sequence ${Selection}</ol>`);
+        }
+         
+       // console.log(body.innerHTML='<ol> </ol>');
+        
+      }
+  </script>
+  <body>
+      <h1>vejamos essa merda</h1>
+      
+  </body>
+</html>

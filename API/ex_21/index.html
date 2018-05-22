@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+    </style>
+    <script>
+        window.onload = function(){
+
+            const ul = document.querySelector('ul');
+            let li = document.querySelectorAll('li');
+            
+            let firstChildElement = li[0];
+            let secondChildElement = li[1];
+            let thirdChildElement = li[2];
+            let fourthChildElement = li[3];
+            
+            firstChildElement.classList.add('orange');
+            firstChildElement.nextElementSibling.classList.add("orange");
+            secondChildElement.nextElementSibling.classList.add('orange');
+            thirdChildElement.nextElementSibling.classList.add('orange');
+            fourthChildElement.nextElementSibling.classList.add('orange');
+            // come back with previousSibling
+           fourthChildElement.previousElementSibling.classList.replace('orange','red');
+           secondChildElement.previousElementSibling.classList.replace('orange','green');
+          
+            console.log(`${ul}`);
+
+        }
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li> Item 1</li>
+        <li> Item 2</li>
+        <li> Item 3</li>
+        <li> Item 4</li>
+        <li> Item 5</li>
+    </ul>
+</body>
+</html>

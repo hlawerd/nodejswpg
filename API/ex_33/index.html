@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function() {
+            const firstButton = document.querySelector('button');
+
+            firstButton.addEventListener('click',function(){
+                console.log('You clicked an event listened element');
+        });
+           
+            function dblclickHandler() {
+                this.style.backgroundColor = 'red';
+            }
+
+            firstButton.addEventListener('dblclick',dblclickHandler);
+        }
+
+    </script>
+    
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

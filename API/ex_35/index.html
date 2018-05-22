@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function() {
+
+            const firstButton = document.querySelector('button');//.addEventListener('click', greeting); => I don't know why it does not work
+            const secondButton= document.getElementById('secondButton');
+            const a           = document.querySelector('a');
+            
+             // ############# request function #############
+            function greeting(){
+                console.log('we\'re using as firstButton event listener');
+            }
+            function removeHandler() {
+                firstButton.removeEventListener('click', greeting);
+            }
+            function message(){
+                return window.alert('This link doesn\'t send us to a differen page as we\'re preventing the default behaviour');
+            }
+            // ############# BUtton action #############
+            firstButton.addEventListener('click',greeting);
+            secondButton.addEventListener('click', removeHandler); 
+            a.addEventListener('click',message);
+        }        
+    </script>
+
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>
