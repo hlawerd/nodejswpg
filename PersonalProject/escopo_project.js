@@ -1,0 +1,30 @@
+file
+  public
+    css
+        style.css
+        .
+        .
+    js
+        javascript.js
+        .
+        .
+    img
+        photos.png
+        .
+        .
+  routers
+    route.js
+  views
+    pages
+     about.pug
+     erro404.pug
+     index.pug
+     .
+     .
+    partial
+        footer.pug
+        header.pug
+        nav.pug
+        container.pug
+server.js    // main script
+conection.js // check the port 
