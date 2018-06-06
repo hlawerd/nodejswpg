@@ -27,6 +27,7 @@ block index
     // ########################## end the Carrosel  ##########################
     // ########################## Begin of the SEARCH section - 1 Section ##########################
     section.search-section
+      // desenvolver a classe css
       div
         form(action="products" method="GET")
           .select1_wrapper
@@ -34,48 +35,36 @@ block index
               //in the fucntion ONCHANGE we setup 2 arguments, on is the first ID and the second one is the Select MODEL
               select.search-select-form#make(tabindex='-1', aria-hidden='true' name='make', onchange="populate(this.id,'model')")
                     option(value='')
-                    option(value='Chevrolet') Chevrolet
+                    option(value='Chevy') Chevy
                     option(value='Dodge') Dodge
                     option(value='Ford') Ford
                     option(value='Acura') Acura
                     option(value='BMW') BMW
-                    option(value='Kia') Kia
+                    option(value='Infiniti') Infiniti
                     option(value='Nissan') Nissan
-                    option(value='Honda') Honda
-                    option(value='GMC') GMC
-                    option(value='Buick') Buick
-                    option(value='Cadillac') Cadillac
+                    option(value='Toyota') Toyota
               //here is empty until we select one with the value
               select.search-select-form.marge-lft#model(tabindex='-1', aria-hidden='true' name='model')            
 
-              select.search-select-form.marge-lft#status(tabindex='-1', aria-hidden='true' name='status' onchange="populateY(this.id,'maxYear')")
+              select.search-select-form.marge-lft#condition(tabindex='-1', aria-hidden='true' name='status' onchange="populateYear(this.id,'maxYear')")
                option(value='')
                option(value='New') New
                option(value='Used') Used
               select.search-select-form.marge-lft#maxYear(tabindex='-1', aria-hidden='true' name='maxYear')
+ 
+              select.search-select-form.marge-lft(tabindex='-1', aria-hidden='true' id='minYear' name='minYear')
                 option(value='')
                 option(value='2018') 2018
                 option(value='2017') 2017
                 option(value='2016') 2016
-                option(value='2015') 2015
-                option(value='2014') 2014
+                option(value='2015') 2015 
+                option(value='2014') 2014     
                 option(value='2013') 2013
                 option(value='2012') 2012
-                option(value='2011') 2011
-                option(value='2010') 2010
-                option(value='2009') 2009 
-              select.search-select-form.marge-lft(tabindex='-1', aria-hidden='true' name='minYear')
-                option(value='')
-                option(value='2018') 2018
-                option(value='2017') 2017
-                option(value='2016') 2016
-                option(value='2015') 2015
-                option(value='2014') 2014
-                option(value='2013') 2013
-                option(value='2012') 2012
-                option(value='2011') 2011
-                option(value='2010') 2010
+                option(value='2011') 2011 
+                option(value='2010') 2010     
                 option(value='2009') 2009
+               
             
             a.more(href='#', style='margin-left: 3.5em;') MISSING MANUFACTURER?
             a.more(href='#', style='margin-left: 7em;') MISSING MODEL?
@@ -84,14 +73,12 @@ block index
             a.more(href='#', style='margin-left: 12.5em;') MINIMUM YEAR
             
           div(style='display: flex; height: 52px;  ')
+            // border: 5px solid #a0ee0f;cd
             .txt(style=' margin-left: 69px; font-size: 14px; font-weight: 700; color: gray; margin-top: 14px;') PRICE RANGE
 
             div
-              input(type='text', readonly='', placeholder='Minimun', style='margin-left: 45px; margin-top: 4px;')
-              input(type='text', readonly='', placeholder='Maximum')
-              label(for='range2')
-                input(type='range2',  min='0', max='300', step='5', value='175')
-              output.output(for='range')
+              input#amount(type='text', readonly='', placeholder='Minimun', style='margin-left: 45px; margin-top: 4px;')
+              input#amount2(type='text', readonly='', placeholder='Maximum')
             div(style=' border: 5px;')
               
               span.adv-serach(style='color: #406d80;	text-decoration: none;text-transform: uppercase; font-size: 10px; ')
@@ -284,9 +271,9 @@ block index
       var slides = document.getElementsByClassName("mySlides");
       /* var dots = document.getElementsByClassName("dot"); */
       if (n > slides.length) {
-        slideIndex = 1
+      slideIndex = 1
       }  else if (n < 1) {
-        slideIndex = slides.length
+      slideIndex = slides.length
       }
       for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none"; slides[i].style.backgroundImage = 'url(img/highlight.jpg)';//no idea try to rotation the photo

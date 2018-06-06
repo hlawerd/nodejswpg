@@ -1,0 +1,162 @@
+include links-mixin
+
+
+doctype html
+html(lang="en")
+	head
+		meta(charset='UTF-8')
+		title=title
+		meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+		
+		+styles
+		script.
+			// s1 and s2 represent a small variable to send 
+			function populate(make,model){
+				var make = document.getElementById(make);
+				var model = document.getElementById(model);
+				model.innerHTML = "";
+					switch(make.value) {
+						case "Chevrolet":
+							var optionArray = ["|","Sonic LT|Sonic LT","Silverado 1500|Silverado 1500","Camaro|Camaro","Corvette|Corvette","Impala|Impala","Equinox|Equinox"];
+						break;
+						case "Dodge":
+							var optionArray = ["|","Ram 1500 SLT|Ram 1500 SLT","challenger|Challenger","charger|Charger"];
+						break;
+						case "Ford":
+							var optionArray = ["|","Mustang GT Premium|Mustang GT Premium","Fusion SE|Fusion SE","Escape|Escape"];
+						break;
+						case "Acura":
+							var optionArray = ["|","cl|CL","ilx|ILX", "integra|Integra"];
+						break;
+						case "Kia":
+							var optionArray = ["|", "Forte SX|Forte SX"];
+						break;
+						case "Honda":
+							var optionArray = ["|", "Civic Touring|Civic Touring"];
+						break;
+						case "Nissan":
+							var optionArray = ["|", "Sentra SR Turbo Premium|Sentra SR Turbo Premium"];
+						break;
+						case "GMC":
+							var optionArray = ["|", "Sierra 1500|Sierra 1500"];
+						break;
+						case "Buick":
+							var optionArray = ["|", "Verano|Verano"];
+						break;
+						case "Cadillac":
+							var optionArray = ["|", "ATS|ATS"];
+						break;
+						case "BMW":
+							var optionArray = ["|", "i-3|i-3"];
+						break;
+						  
+						 
+						 
+					}
+					
+					for(var option in optionArray){
+						var pair = optionArray[option].split("|");
+						var newOption = document.createElement("option");//this line is creating new element
+						newOption.value = pair[0];
+						newOption.innerHTML = pair[1];
+						model.options.add(newOption);
+					}
+			}
+		script.
+			function populateY(status, maxYear)
+			{
+				var status  = document.getElementById(status);
+				var maxYear = document.getElementById(maxYear);
+				var minYear = document.getElementById(minYear);
+				maxYear.innerHTML = ""; //minYear.innerHTML = "";
+					switch(status.value) 
+					{
+						case "New":	var optnArray = ["|","2018|2018","2017|2017"];	break;
+						case "Used":var optnArray = ["|","2017|2017","2016|2016","2015|2015","2014|2014","2013|2013","2012|2012","2011|2011","2010|2010","2009|2009"];	break;
+					}
+
+					for(var optn in optnArray)
+					{
+						var pair = optnArray[optn].split("|");//separeted by "|"
+						var newOption = document.createElement("option");
+						newOption.value = pair[0];		 // is getting reference from first value before |
+						newOption.innerHTML = pair[1];	 // is getting reference from second value after |
+						//minYear.options.add(newOption);
+						maxYear.options.add(newOption);
+					}
+			}
+		
+	body
+		
+		header.header
+			h1.logo Logo
+			nav
+				ul
+					li
+						a(href='/') Home
+					li
+						a(href='404') Buy
+					li
+						a(href='404') Sell
+					li
+						a(href='products') Products
+					li
+						a(href='404') About Us
+					li
+						a(href='404') Contact
+		block index
+		block error404
+		block content
+		//block hours
+		// ########################## Begin of the FIRST footer  ##########################
+		footer.footer(style='background:#292c2f;color: #f5f3f3; box-sizing: border-box;')
+			// The content of your page would go here.
+			footer.footer-distributed
+				.footer-left
+					h3
+						span
+							a.logo2(href='index.html')
+								img(src='img/logo2.png', alt='')
+								h6(style=" width: 10px; font-family: 'Cabin Sketch', cursive; color: #4c8a19;") Malima's
+					p.footer-links
+						a(href='/') Home
+						| 								·
+						a(href='404') Buy
+						| 								·
+						a(href='404') Sell
+						| 								·
+						a(href='products') products
+						| 								·
+						a(href='404') About Us
+						| 								·
+						a(href='404') Contact
+					p.footer-company-name © 2018 Designed & Powered by Hugo Lima
+				.footer-center
+					div
+						i.fa.fa-map-marker
+						p
+							span 3 Donald Street
+							|  Winnipeg, MB Canada
+					div
+						i.fa.fa-phone
+						p +1 204 952-8774
+					div
+						i.fa.fa-envelope
+						p
+							a(href='mailto:hlawerd@gmail.com') support@malimacar.ca
+				.footer-right
+					p.footer-company-about
+						span About Malima's Car
+						| 								Trust 
+						strong Malima's Car
+						|  Vehicle Service Center for professional quality maintenance and repair services.
+					.footer-icons
+						a(href='#')
+							i.fa.fa-facebook
+						a(href='#')
+							i.fa.fa-twitter
+						a(href='#')
+							i.fa.fa-linkedin
+						a(href='#')
+							i.fa.fa-github
+		// ########################## End of the FIRST footer  ##########################

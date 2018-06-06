@@ -1,0 +1,34 @@
+extends layout.pug
+
+block content
+  .highlight(style='background-image: url(img/highlight.jpg)')
+      .mySlides.fade
+        .carrosel-numbertext
+          span.carrosel-span FIND YOUR DREAM CAR
+          .carrosel-div1 A NEW ERA OF LUXURY
+          .carrosel-div2
+            | MODEL 2018 
+            span $122,111
+          .txt4
+            a(href='#') See detail
+        // <img src="img/highlight.jpg" style="background-size: cover;width:100%, background-repeat:no-repeat;background-attachment: fixed; background-position: center;" alt="img1.jpg">
+      
+        // <img src="img/slide03.jpg" style="width:100%" alt="img1.jpg">
+      a.prev(onclick='plusSlides(-1)', style='left: -10px;') ❮
+      a.next(onclick='plusSlides(1)') ❯
+    
+  //h1= mainTitle
+  each product in productCollection
+    section.features
+      .container(style='padding: 0px;padding-bottom:-10px;')
+        div.product
+          h2(style='font-size: 36px;background-color: #4c8a19; width:450px;text-align:center;')= product.status + ' ' +product.year+ '-' +product.make+ ' ' +product.model          
+          .polaroid
+            img(src=imagesFolder + product.image)
+            .container
+              p= `Stock Number - ${product.stock} `
+              p= 'Price for you: $ '+ product.price
+              div= 'Make: ' + product.make
+              div= 'Year of Factory '+ product.year
+              div= 'Price $' + product.price
+              div= 'Type of Body: ' + product.bodystyle

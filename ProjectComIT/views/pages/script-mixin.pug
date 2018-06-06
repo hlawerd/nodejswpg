@@ -1,0 +1,24 @@
+mixin script
+
+		script.
+			function populate(make,model){
+			  var make = document.getElementById(make);
+			  var model = document.getElementById(model);
+			  model.innerHTML = "";
+        if(make.value == "Chevy"){
+          var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
+        } else if(make.value == "Dodge"){
+          var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
+        } else if(make.value == "Ford"){
+          var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
+        } else if(make.value == "Acura"){ 
+          var optionArray = ["|","cl|CL","ilx|ILX", "integra|Integra"]
+        }
+        for(var option in optionArray){
+          var pair = optionArray[option].split("|");
+          var newOption = document.createElement("option");
+          newOption.value = pair[0];
+          newOption.innerHTML = pair[1];
+          model.options.add(newOption);
+        }
+			}
